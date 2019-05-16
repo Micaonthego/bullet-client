@@ -1,33 +1,107 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* set project-wide font  */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  /* padding around website */
+  padding: 30px;
+}
+
+/* setting style for entire header/homepage */
+.header {
+  /* height takes up 95% of viewport */
+  height: 95vh;
+  /* last number in hsla is opacity, in this case 80% */
+  background-image: linear-gradient(to right bottom, rgba(8, 8, 8, 0.8), rgba(18, 19, 18, 0.8)),
+    url(./city.jpg);
+  background-size: cover;
+  background-position: top;
+  /* parent to logo-box, so set position of it to relative here */
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+    /* set coordinates of corners of shape you want to be visible, this is wedge at bottom of header */
+}
+
+
+.text-box {
+  position: absolute;
+  /* % in relation to parent element */
+  top: 40%;
+  left: 50%;
+  /* in relation to the element itself */
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+  /* hack to fix shakiness seen in animations */
+  margin-bottom: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  /* there are many animation features, below are used for project and other useful ones */
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* animation-iteration-count: 3; */
+  /* animation-delay: 3s; */
 }
 
-.App-link {
-  color: #61dafb;
+.heading-primary-sub {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: moveInRight 1s ease-out;
+  /* animation: figures out what we want from animations specified above */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* keyframes are what we use for animations */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
-  to {
-    transform: rotate(360deg);
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }

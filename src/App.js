@@ -1,23 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './bullet_logo.png';
 import './App.css';
+// import Router from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="Landing">
+      <header className="header">
+        <div class='text-box'>
+          <h1 class='heading-primary'>
+            <span class='heading-primary-main'>BULLET.</span>
+            <span class='heading-primary-sub'>you don't have to slow down to get in touch with yourself</span>
+          </h1>
+        </div>
       </header>
     </div>
   );
