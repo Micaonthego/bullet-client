@@ -1,20 +1,20 @@
 import React from 'react';
-import logo from './bullet_logo.png';
 import './App.css';
-// import Router from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
+import Signup from './Signup'
+import Landing from './Landing'
+import Login from './Login'
+
 
 function App() {
   return (
-    <div className="Landing">
-      <header className="header">
-        <div class='text-box'>
-          <h1 class='heading-primary'>
-            <span class='heading-primary-main'>BULLET.</span>
-            <span class='heading-primary-sub'>you don't have to slow down to get in touch with yourself</span>
-          </h1>
-        </div>
-      </header>
-    </div>
+    < React.Fragment >
+      <Switch>
+        <Route path='/login' component={Login} />
+        <Route path='/signup' component={Signup} />
+        <Route path='/' component={Landing} />
+      </Switch>
+    </React.Fragment >
   );
 }
 
