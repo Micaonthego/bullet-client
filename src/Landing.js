@@ -12,13 +12,8 @@ function Landing() {
                         <span className='heading-primary-sub'>you don't have to slow down to get in touch with yourself</span>
                     </h1>
                     <button>
-                        <Link to='/signup'>
-                            SignUp
-    </Link>
-                    </button>
-                    <button>
                         <Link to='/login'>
-                            Login
+                            Get Started
     </Link>
                     </button>
                 </div>
