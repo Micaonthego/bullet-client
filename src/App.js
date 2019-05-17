@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom'
-// import Signup from './Signup'
+import Signup from './Signup'
 import Landing from './Landing'
-import Login from './Login'
+import Signin from './Signin'
 import HomeDeck from './HomeDeck'
+import NavDot from './NavDot'
 
 class App extends Component {
 
@@ -25,13 +26,17 @@ class App extends Component {
       < React.Fragment >
         <Switch>
           <Route path='/homedeck' component={HomeDeck} />
-          <Route path='/login' render={(props) => {
-            return <Login setCurrentUser={this.setCurrentUser} {...props} />
+          <Route path='/signin' render={(props) => {
+            return <Signin setCurrentUser={this.setCurrentUser} {...props} />
           }} /> />
-          {/* <Route path='/signup' component={Signup} /> */}
+          <Route path='/signup' render={(props) => {
+            return <Signup setCurrentUser={this.setCurrentUser} {...props} />
+          }} />
           <Route path='/' component={Landing} />
         </Switch>
+        <NavDot />
       </React.Fragment >
+     
     )
   }
 }

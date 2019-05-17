@@ -38,7 +38,7 @@ class Signup extends Component {
                 }
             }
             )
-        this.props.history.push(`/`)
+        this.props.history.push(`/homedeck`)
     }
 
 
@@ -60,20 +60,30 @@ class Signup extends Component {
         ).open()
     }
 
+    signupClick = () => {
+
+    }
+
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.createUser}>
-                    <input onChange={this.onChange} placeholder='Enter Username' name='userame' type='text'>
-                    </input>
-                    <input onChange={this.onChange} placeholder='Enter Aspiration' name='aspiration' type='text'>
-                    </input>
-                    <input onChange={this.onChange} placeholder='Enter Password' name='password' type='password'>
-                    </input>
-                    <button onClick={this.openWidget}>Add Photo</button>
-                    <button type='submit'>Submit</button>
-                </form>
+            <div className="container" id="container">
+                <div className="form-container sign-up-container">
+                    <form onSubmit={this.createUser} action="#">
+                        <h1>Create Account</h1>
+                        {/* <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div> */}
+                        <span>or use your email for registration</span>
+                        <input onChange={this.onChange} type="text" placeholder="Username" name="username" />
+                        <input onChange={this.onChange} type="text" placeholder="Aspiration" name="aspiration" />
+                        <input onChange={this.onChange} type="password" placeholder="Password" name="password" />
+                        <button onClick={this.openWidget}>+ Photo</button>
+                        <button>Sign Up</button>
+                    </form>
+                </div>
             </div>
         )
     }

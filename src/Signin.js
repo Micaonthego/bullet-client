@@ -1,101 +1,81 @@
 import React, { Component } from 'react'
 import './App.css';
 
-class Login extends Component {
+class Signin extends Component {
 
     state = {
         username: '',
-        photo: '',
-        password: '',
-        aspiration: ''
+        password: ''
     }
+
+    // need to add password field to the back end
     onChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
 
-    createUser = () => {
-        const newUser = {
-            photo: this.state.photo,
-            name: this.state.username,
-            password: this.state.password,
-            aspiration: this.state.aspiration
-        }
-
-        fetch('http://localhost:3000/users', {
+    userSignin = () => {
+        fetch('http://localhost:3000/login', {
             method: 'POST',
             headers:
-                { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({ user: newUser })
+            {
+                'Content-Type': 'application/json', 'Accept': 'application/json'
+
+            },
+            body: JSON.stringify(this.state)
         })
             .then(res => res.json())
-            .then((response) => {
+            .then(response => {
                 if (response.errors) {
-                    alert("Please check your info 🙃")
+                    alert("Please try Again")
                 } else {
                     this.props.setCurrentUser(response)
                 }
-            }
-            )
-        this.props.history.push(`/`)
+            })
+        this.props.history.push(`/homedeck`)
     }
 
-    openWidget = (e) => {
+    // fetch for create user or lookup user 
+    handleSubmit = (e) => {
         e.preventDefault()
-        window.cloudinary.createUploadWidget(
-            {
-                cloudName: process.env.REACT_APP_CLOUD_NAME_KEY,
-                uploadPreset: process.env.REACT_APP_UPLOAD_PRESET_KEY
-            },
-            (error, result) => {
-
-                if (result && result.event === "success") {
-                    this.setState({
-                        photo: `https://res.cloudinary.com/dxrq2ko4y/image/upload/${result.info.path}`, uploaded: true
-                    });
-                }
-            }
-        ).open()
+        this.userSignin()
     }
 
-    signupClick = () => {
-
-    }
-    loginClick = () => {
+    signinClick = () => {
 
     }
 
     render() {
         return (
             <div className="container" id="container">
-                <div className="form-container sign-up-container">
+                {/* <div className="form-container sign-up-container">
                     <form action="#">
-                        <h1>Create Account</h1>
-                        {/* <div class="social-container">
+                        <h1>Create Account</h1> */}
+                {/* <div class="social-container">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                         </div> */}
-                        <span>or use your email for registration</span>
+                {/* <span>or use your email for registration</span>
                         <input type="text" placeholder="Username" name="username" />
                         <input type="text" placeholder="Aspiration" name="aspiration" />
                         <input type="password" placeholder="Password" name="password" />
                         <button onClick={this.openWidget}>+ Photo</button>
                         <button>Sign Up</button>
                     </form>
-                </div>
+                </div> */}
                 <div class="form-container sign-in-container">
-                    <form action="#">
+                    <form onSubmit={this.handleSubmit} action="#">
                         <h1>Sign in</h1>
                         {/* <div class="social-container">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                         </div> */}
-                        <span>or use your account</span>
-                        <input type="text" placeholder="Username" />
-                        <input type="password" placeholder="Password" />
+                        {/* <span>or use your account</span> */}
+                        <input onChange={this.onChange} type="text" placeholder="Username" name='username' />
+                        <input onChange={this.onChange} type="password" placeholder="Password" name="password" />
                         <br />
                         <br />
                         {/* <a href="#">Forgot your password?</a> */}
@@ -123,4 +103,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Signin;
