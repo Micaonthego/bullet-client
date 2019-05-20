@@ -122,7 +122,13 @@ body {
 h1 {
   font-weight: bold;
   margin: 0;
-  color: rgb(54, 54, 54);
+  color: rgb(252, 249, 249);
+}
+
+.black-text {
+  font-weight: bold;
+  margin: 0;
+  color: rgb(2, 2, 2);
 }
 
 p {
@@ -343,7 +349,7 @@ input {
 }
 
 .navigation__button {
-  background-color: #fff;
+  background-color: #000;
   height: 3.50rem;
   width: 3.50rem;
   position: fixed;
@@ -439,7 +445,7 @@ input {
 .navigation__icon::after {
   width: 1.85rem;
   height: 2px;
-  background-color: #333;
+  background-color: #fff;
   display: inline-block;
 }
 

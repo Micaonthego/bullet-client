@@ -3,22 +3,22 @@ import React from 'react'
 function NavDot() {
     return (
         <body>
-            <div class="navigation">
-                <input type="checkbox" class="navigation__checkbox" id="navi-toggle"></input>
+            <div className="navigation">
+                <input type="checkbox" className="navigation__checkbox" id="navi-toggle"></input>
 
-                <label for="navi-toggle" class="navigation__button">
-                    <span class="navigation__icon">&nbsp;</span>
+                <label for="navi-toggle" className="navigation__button">
+                    <span className="navigation__icon">&nbsp;</span>
                 </label>
 
-                <div class="navigation__background">&nbsp;</div>
+                <div className="navigation__background">&nbsp;</div>
 
-                <nav class="navigation__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">About Bullet</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Bullet Home</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Calendar View</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Timeline View</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Signout</a></li>
+                <nav className="navigation__nav">
+                    <ul className="navigation__list">
+                        <li className="navigation__item"><a href="#" className="navigation__link">About Bullet</a></li>
+                        <li className="navigation__item"><a href="#" className="navigation__link">Bullet Home</a></li>
+                        <li className="navigation__item"><a href="#" className="navigation__link">Calendar View</a></li>
+                        <li className="navigation__item"><a href="#" className="navigation__link">Timeline View</a></li>
+                        <li className="navigation__item"><a href="#" className="navigation__link">Signout</a></li>
                     </ul>
                 </nav>
             </div>

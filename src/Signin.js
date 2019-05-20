@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
+import { Link } from 'react-router-dom'
 
 class Signin extends Component {
 
@@ -27,6 +28,7 @@ class Signin extends Component {
         })
             .then(res => res.json())
             .then(response => {
+                console.log(response)
                 if (response.errors) {
                     alert("Please try Again")
                 } else {
@@ -67,7 +69,7 @@ class Signin extends Component {
                 </div> */}
                 <div class="form-container sign-in-container">
                     <form onSubmit={this.handleSubmit} action="#">
-                        <h1>Sign in</h1>
+                        <h1 class="black-text">Sign in</h1>
                         {/* <div class="social-container">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -84,21 +86,25 @@ class Signin extends Component {
                 </div>
                 <div class="overlay-container">
                     <div class="overlay">
-                        <div class="overlay-panel overlay-left">
+                        <div class="overlay-panel overlay-right">
                             <h1>Welcome Back!</h1>
                             <p>
-                                To keep connected with us please login with your personal info
+                                To keep connected with us please login with your personal info or click to signup
             </p>
-                            <button class="ghost" id="signIn">Sign In</button>
+                            <button class="ghost" id="signIn"><Link to='/signup'>Sign Up</Link></button>
                         </div>
-                        <div class="overlay-panel overlay-right">
+                        {/* <div class="overlay-panel overlay-right">
                             <h1>Hello, Friend!</h1>
                             <p>Enter your personal details and start journey with us</p>
-                            <button class="ghost" id="signUp">Sign Up</button>
-                        </div>
+                            
+                            <button class="ghost" id="signUp"> <Link to='/signup'>Sign Up</Link>
+
+                            </button>
+
+                    </div> */}
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }
