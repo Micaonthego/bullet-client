@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { FaCameraRetro } from 'react-icons/fa';
 
-class Bullet extends Component {
+class NewBullet extends Component {
 
     state = {
         gratitude: '',
@@ -8,8 +9,8 @@ class Bullet extends Component {
         accomplishment: '',
         reflection: '',
         favorite: false,
-        photo: '',
-        date: moment().format("MMM Do YY")
+        photo: 'https://images.pexels.com/photos/415402/pexels-photo-415402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        date: Date.now
     }
 
     onChange = (e) => {
@@ -32,7 +33,7 @@ class Bullet extends Component {
         fetch('http://localhost:3000/bullets', {
             method: 'POST',
             headers:
-                { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token') },
             body: JSON.stringify({ bullet: newBullet })
         })
             .then(res => res.json())
@@ -42,7 +43,7 @@ class Bullet extends Component {
                 }
             }
             )
-        // this.props.history.push(`/homedeck`)
+        // this.props.history.push(`/calendar`)
     }
 
     openWidget = (e) => {
@@ -63,16 +64,22 @@ class Bullet extends Component {
         ).open()
     }
 
+    render() {
+        return (
+            <div>
+                <form onSubmit={this.createBullet}>
+                    <input onChange={this.onChange} type="text" placeholder="I am grateful for..." name="gratitude" />
+                    <input onChange={this.onChange} type="text" placeholder="I want to prioritize..." name="priority" />
+                    <input onChange={this.onChange} type="text" placeholder="I have accomplished..." name="accomplishment" />
+                    <input onChange={this.onChange} type="text" placeholder="I am feeling..." name="reflection" />
+                    <button onClick={this.openWidget}><FaCameraRetro/></button>
+                    <br/>
+                    <button>Submit</button>
+                </form>
+            </div>
+        )
+    }
+
 }
 
-
-render() {
-    return (
-        <div>
-
-        </div>
-    )
-}
-}
-
-export default Bullet
+export default NewBullet

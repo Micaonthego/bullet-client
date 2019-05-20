@@ -2,11 +2,11 @@ import React from 'react'
 
 function NavDot() {
     return (
-        <body>
+        <body> 
             <div className="navigation">
                 <input type="checkbox" className="navigation__checkbox" id="navi-toggle"></input>
 
-                <label for="navi-toggle" className="navigation__button">
+                <label htmlFor="navi-toggle" className="navigation__button">
                     <span className="navigation__icon">&nbsp;</span>
                 </label>
 
@@ -22,7 +22,7 @@ function NavDot() {
                     </ul>
                 </nav>
             </div>
-        </body>
+        </body> 
     )
 }
 

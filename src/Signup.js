@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 // import cloudinary from 'cloudinary-react'
 
 class Signup extends Component {

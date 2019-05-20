@@ -6,6 +6,7 @@ import Landing from './Landing'
 import Signin from './Signin'
 import HomeDeck from './HomeDeck'
 import NavDot from './NavDot'
+import Calendar from './Calendar'
 
 class App extends Component {
 
@@ -25,10 +26,13 @@ class App extends Component {
     return (
       < React.Fragment >
         <Switch>
-          <Route path='/homedeck' component={HomeDeck} />
+          <Route path='/calendar' component={Calendar} />
+          <Route path='/homedeck' render={(props) => {
+            return <HomeDeck currentUser={this.state.currentUser} {...props} />
+          }} />
           <Route path='/signin' render={(props) => {
             return <Signin setCurrentUser={this.setCurrentUser} {...props} />
-          }} /> />
+          }} />
           <Route path='/signup' render={(props) => {
             return <Signup setCurrentUser={this.setCurrentUser} {...props} />
           }} />
@@ -36,7 +40,7 @@ class App extends Component {
         </Switch>
         <NavDot />
       </React.Fragment >
-     
+
     )
   }
 }
