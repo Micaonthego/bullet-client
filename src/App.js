@@ -11,12 +11,14 @@ import Calendar from './Calendar'
 class App extends Component {
 
   state = {
-    currentUser: null
+    currentUser: null,
+    bullets: []
   }
 
   setCurrentUser = (response) => {
     this.setState({
-      currentUser: response.user
+      currentUser: response.user, 
+      bullets: response.user.bullets
     }, () => {
       localStorage.setItem("token", response.token)
     })
@@ -26,9 +28,11 @@ class App extends Component {
     return (
       < React.Fragment >
         <Switch>
-          <Route path='/calendar' component={Calendar} />
+          <Route path='/calendar' render={(props) => {
+            return <Calendar bullets={this.state.bullets}  {...props} />
+          }} />
           <Route path='/homedeck' render={(props) => {
-            return <HomeDeck  {...props} />
+            return <HomeDeck setCurrentUser={this.setCurrentUser}  {...props} />
           }} />
           <Route path='/signin' render={(props) => {
             return <Signin setCurrentUser={this.setCurrentUser} {...props} />

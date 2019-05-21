@@ -20,7 +20,8 @@ class NewBullet extends Component {
         })
     }
 
-    createBullet = () => {
+    createBullet = (e) => {
+        e.preventDefault()
         const newBullet = {
             gratitude: this.state.gratitude,
             priority: this.state.priority,
@@ -42,9 +43,11 @@ class NewBullet extends Component {
                 if (response.errors) {
                     alert("Please check your info 🙃")
                 }
+                    // need to create function in app to copy bullets state and shovel new bullet into there
+            
+                this.props.history.push(`/calendar`)
             }
             )
-        this.props.history.push(`/calendar`)
     }
 
     openWidget = (e) => {

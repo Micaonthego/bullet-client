@@ -44,10 +44,6 @@ class Signin extends Component {
         this.userSignin()
     }
 
-    signinClick = () => {
-
-    }
-
     render() {
         return (
             <div className="container" id="container">
