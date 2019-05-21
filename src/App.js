@@ -28,7 +28,7 @@ class App extends Component {
         <Switch>
           <Route path='/calendar' component={Calendar} />
           <Route path='/homedeck' render={(props) => {
-            return <HomeDeck currentUser={this.state.currentUser} {...props} />
+            return <HomeDeck  {...props} />
           }} />
           <Route path='/signin' render={(props) => {
             return <Signin setCurrentUser={this.setCurrentUser} {...props} />

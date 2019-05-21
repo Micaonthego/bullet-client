@@ -12,15 +12,18 @@ class Calendar extends Component {
     }
 
     fetchBullets = () => {
-        return fetch('http://localhost:3000/bullets')
+        return fetch('http://localhost:3000/bullets', {
+            method: 'GET',
+            headers:
+                { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token') }
+        })
             .then(res => res.json())
             .then(bullets => this.setState({ bullets }))
     }
 
-// map and pass down to bulletcard, in bulletcard make my css cards
-renderBullets = () => {
-    return this.state.bullets.map(bullet => <BulletCard key={bullet.id} bullet={bullet} />)
-}
+    renderBullets = () => {
+        return this.state.bullets.map(bullet => <BulletCard key={bullet.id} bullet={bullet} />)
+    }
 
     render() {
         // console.log(this.state.bullets)

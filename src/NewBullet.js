@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FaCameraRetro } from 'react-icons/fa';
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 class NewBullet extends Component {
 
@@ -44,7 +44,7 @@ class NewBullet extends Component {
                 }
             }
             )
-        // this.props.history.push(`/calendar`)
+        this.props.history.push(`/calendar`)
     }
 
     openWidget = (e) => {
@@ -66,6 +66,7 @@ class NewBullet extends Component {
     }
 
     render() {
+        console.log(this.props.history)
         return (
             <div>
                 <form onSubmit={this.createBullet}>
@@ -75,7 +76,7 @@ class NewBullet extends Component {
                     <input onChange={this.onChange} type="text" placeholder="I am feeling..." name="reflection" />
                     <button onClick={this.openWidget}><FaCameraRetro /></button>
                     <br />
-                    <button><Link to='/calendar'>Submit</Link></button>
+                    <button>Submit</button>
                 </form>
             </div>
         )
@@ -83,4 +84,4 @@ class NewBullet extends Component {
 
 }
 
-export default NewBullet
+export default withRouter(NewBullet)

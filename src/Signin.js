@@ -67,9 +67,9 @@ class Signin extends Component {
                         <button>Sign Up</button>
                     </form>
                 </div> */}
-                <div class="form-container sign-in-container">
+                <div className="form-container sign-in-container">
                     <form onSubmit={this.handleSubmit} action="#">
-                        <h1 class="black-text">Sign in</h1>
+                        <h1 className="black-text">Sign in</h1>
                         {/* <div class="social-container">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -84,14 +84,14 @@ class Signin extends Component {
                         <button>Sign In</button>
                     </form>
                 </div>
-                <div class="overlay-container">
-                    <div class="overlay">
-                        <div class="overlay-panel overlay-right">
+                <div className="overlay-container">
+                    <div className="overlay">
+                        <div className="overlay-panel overlay-right">
                             <h1>Welcome Back!</h1>
                             <p>
                                 To keep connected with us please login with your personal info or click to signup
             </p>
-                            <button class="ghost" id="signIn"><Link to='/signup'>Sign Up</Link></button>
+                            <button className="ghost" id="signIn"><Link to='/signup'>Sign Up</Link></button>
                         </div>
                         {/* <div class="overlay-panel overlay-right">
                             <h1>Hello, Friend!</h1>
