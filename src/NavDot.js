@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 function NavDot() {
     return (
-        <body> 
+        <body>
             <div className="navigation">
                 <input type="checkbox" className="navigation__checkbox" id="navi-toggle"></input>
 
@@ -15,14 +17,14 @@ function NavDot() {
                 <nav className="navigation__nav">
                     <ul className="navigation__list">
                         <li className="navigation__item"><a href="#" className="navigation__link">About Bullet</a></li>
-                        <li className="navigation__item"><a href="#" className="navigation__link">Bullet Home</a></li>
-                        <li className="navigation__item"><a href="#" className="navigation__link">Calendar View</a></li>
+                        <li className="navigation__item"> <Link className="navigation__link" to='/homedeck'>Bullet Home</Link></li>
+                        <li className="navigation__item"><Link className="navigation__link" to='/calendar'>Calendar View</Link></li>
                         <li className="navigation__item"><a href="#" className="navigation__link">Timeline View</a></li>
                         <li className="navigation__item"><a href="#" className="navigation__link">Signout</a></li>
                     </ul>
                 </nav>
             </div>
-        </body> 
+        </body>
     )
 }
 

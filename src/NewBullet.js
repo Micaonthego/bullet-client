@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { FaCameraRetro } from 'react-icons/fa';
+import { Link } from 'react-router-dom'
 
 class NewBullet extends Component {
 
@@ -72,9 +73,9 @@ class NewBullet extends Component {
                     <input onChange={this.onChange} type="text" placeholder="I want to prioritize..." name="priority" />
                     <input onChange={this.onChange} type="text" placeholder="I have accomplished..." name="accomplishment" />
                     <input onChange={this.onChange} type="text" placeholder="I am feeling..." name="reflection" />
-                    <button onClick={this.openWidget}><FaCameraRetro/></button>
-                    <br/>
-                    <button>Submit</button>
+                    <button onClick={this.openWidget}><FaCameraRetro /></button>
+                    <br />
+                    <button><Link to='/calendar'>Submit</Link></button>
                 </form>
             </div>
         )
