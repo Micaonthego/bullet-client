@@ -18,12 +18,15 @@ class Calendar extends Component {
     }
 
 // map and pass down to bulletcard, in bulletcard make my css cards
+renderBullets = () => {
+    return this.state.bullets.map(bullet => <BulletCard key={bullet.id} bullet={bullet} />)
+}
 
     render() {
         // console.log(this.state.bullets)
         return (
             <div>
-                {/* <BulletCard /> */}
+                {this.renderBullets()}
             </div>
         )
     }
