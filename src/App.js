@@ -43,13 +43,31 @@ class App extends Component {
             )
     }
 
+    deleteBullet = (id) => {
+        fetch(`http://localhost:3000/bullets/${id}`, {
+            method: 'DELETE',
+            headers:
+                { 'Authorization': localStorage.getItem('token') },
+        })
+            .then(res => res.json())
+            .then(resp => {
+                this.setState(prevState => {
+                    let bulletData = prevState.bullets.filter(bullet => bullet.id !== resp.id)
+                    return {
+                        bullets: bulletData
+                    }
+
+                })
+            })
+    }
+
 
   render() {
     return (
       < React.Fragment >
         <Switch>
           <Route path='/calendar' render={(props) => {
-            return <Calendar  bullets={this.state.bullets}  {...props} />
+            return <Calendar deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} />
           }} />
           <Route path='/homedeck' render={(props) => {
             return <HomeDeck addBullet={this.addBullet} bullets={this.state.bullets} setCurrentUser={this.setCurrentUser}  {...props} />
