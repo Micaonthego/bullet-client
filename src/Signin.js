@@ -47,36 +47,13 @@ class Signin extends Component {
     render() {
         return (
             <div className="container" id="container">
-                {/* <div className="form-container sign-up-container">
-                    <form action="#">
-                        <h1>Create Account</h1> */}
-                {/* <div class="social-container">
-                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                        </div> */}
-                {/* <span>or use your email for registration</span>
-                        <input type="text" placeholder="Username" name="username" />
-                        <input type="text" placeholder="Aspiration" name="aspiration" />
-                        <input type="password" placeholder="Password" name="password" />
-                        <button onClick={this.openWidget}>+ Photo</button>
-                        <button>Sign Up</button>
-                    </form>
-                </div> */}
                 <div className="form-container sign-in-container">
                     <form onSubmit={this.handleSubmit} action="#">
                         <h1 className="black-text">Sign in</h1>
-                        {/* <div class="social-container">
-                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                        </div> */}
-                        {/* <span>or use your account</span> */}
                         <input onChange={this.onChange} type="text" placeholder="Username" name='username' />
                         <input onChange={this.onChange} type="password" placeholder="Password" name="password" />
                         <br />
                         <br />
-                        {/* <a href="#">Forgot your password?</a> */}
                         <button>Sign In</button>
                     </form>
                 </div>
@@ -89,15 +66,6 @@ class Signin extends Component {
             </p>
                             <button className="ghost" id="signIn"><Link to='/signup'>Sign Up</Link></button>
                         </div>
-                        {/* <div class="overlay-panel overlay-right">
-                            <h1>Hello, Friend!</h1>
-                            <p>Enter your personal details and start journey with us</p>
-                            
-                            <button class="ghost" id="signUp"> <Link to='/signup'>Sign Up</Link>
-
-                            </button>
-
-                    </div> */}
                     </div>
                 </div>
             </div >

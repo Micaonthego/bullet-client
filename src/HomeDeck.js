@@ -8,7 +8,7 @@ class HomeDeck extends Component {
         return (
             <div>
                 <Profile />
-                <NewBullet setCurrentUser={this.props.setCurrentUser} />
+                <NewBullet addBullet={this.props.addBullet} bullets={this.props.bullets} setCurrentUser={this.props.setCurrentUser} />
             </div>
         )
     }

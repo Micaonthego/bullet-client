@@ -31,24 +31,38 @@ class NewBullet extends Component {
             photo: this.state.photo,
             date: this.state.date
         }
+    this.props.addBullet(newBullet)
 
-        fetch('http://localhost:3000/bullets', {
-            method: 'POST',
-            headers:
-                { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token') },
-            body: JSON.stringify({ bullet: newBullet })
-        })
-            .then(res => res.json())
-            .then((response) => {
-                if (response.errors) {
-                    alert("Please check your info 🙃")
-                }
-                    // need to create function in app to copy bullets state and shovel new bullet into there
+    this.setState({
+        gratitude: '',
+        priority: '',
+        accomplishment: '',
+        reflection: '',
+        favorite: false,
+        photo: 'https://images.pexels.com/photos/415402/pexels-photo-415402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        date: Date.now
+    })
+     this.props.history.push(`/calendar`)
+ }    
+
+
+    //     fetch('http://localhost:3000/bullets', {
+    //         method: 'POST',
+    //         headers:
+    //             { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token') },
+    //         body: JSON.stringify({ bullet: newBullet })
+    //     })
+    //         .then(res => res.json())
+    //         .then((response) => {
+    //             if (response.errors) {
+    //                 alert("Please check your info 🙃")
+    //             }
+    //                 // need to create function in app to copy bullets state and shovel new bullet into there
             
-                this.props.history.push(`/calendar`)
-            }
-            )
-    }
+    //             this.props.history.push(`/calendar`)
+    //         }
+    //         )
+    // }
 
     openWidget = (e) => {
         e.preventDefault()

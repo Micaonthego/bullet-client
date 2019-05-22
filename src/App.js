@@ -24,15 +24,35 @@ class App extends Component {
     })
   }
 
+          addBullet = (newBullet) => {
+            fetch('http://localhost:3000/bullets', {
+            method: 'POST',
+            headers:
+                { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token') },
+            body: JSON.stringify({ bullet: newBullet })
+        })
+            .then(res => res.json())
+            .then((response) => {
+                if (response.errors) {
+                    alert("Please check your info 🙃")
+                } else {
+                  this.setState({bullets: [...this.state.bullets, response]})
+                }
+                // this.props.history.push(`/calendar`)
+            }
+            )
+    }
+
+
   render() {
     return (
       < React.Fragment >
         <Switch>
           <Route path='/calendar' render={(props) => {
-            return <Calendar bullets={this.state.bullets}  {...props} />
+            return <Calendar  bullets={this.state.bullets}  {...props} />
           }} />
           <Route path='/homedeck' render={(props) => {
-            return <HomeDeck setCurrentUser={this.setCurrentUser}  {...props} />
+            return <HomeDeck addBullet={this.addBullet} bullets={this.state.bullets} setCurrentUser={this.setCurrentUser}  {...props} />
           }} />
           <Route path='/signin' render={(props) => {
             return <Signin setCurrentUser={this.setCurrentUser} {...props} />
