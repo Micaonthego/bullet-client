@@ -5,7 +5,7 @@ import Signup from './Signup'
 import Landing from './Landing'
 import Signin from './Signin'
 import HomeDeck from './HomeDeck'
-import NavDot from './NavDot'
+// import NavDot from './NavDot'
 import Calendar from './Calendar'
 
 class App extends Component {
@@ -23,6 +23,7 @@ class App extends Component {
       localStorage.setItem("token", response.token)
     })
   }
+
 
           addBullet = (newBullet) => {
             fetch('http://localhost:3000/bullets', {
@@ -63,6 +64,7 @@ class App extends Component {
 
 
   render() {
+    console.log(this.state.currentUser)
     return (
       < React.Fragment >
         <Switch>
@@ -70,17 +72,17 @@ class App extends Component {
             return <Calendar deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} />
           }} />
           <Route path='/homedeck' render={(props) => {
-            return <HomeDeck addBullet={this.addBullet} bullets={this.state.bullets} setCurrentUser={this.setCurrentUser}  {...props} />
+            return <HomeDeck  addBullet={this.addBullet} bullets={this.state.bullets} setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser}  {...props} />
           }} />
           <Route path='/signin' render={(props) => {
-            return <Signin setCurrentUser={this.setCurrentUser} {...props} />
+            return <Signin setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
           }} />
           <Route path='/signup' render={(props) => {
-            return <Signup setCurrentUser={this.setCurrentUser} {...props} />
+            return <Signup setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
           }} />
           <Route path='/' component={Landing} />
         </Switch>
-        <NavDot />
+        {/* <NavDot/> */}
       </React.Fragment >
 
     )

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
-// import cloudinary from 'cloudinary-react'
+// import NavDot from './NavDot'
+import './Signin.css';
+
+
 
 class Signup extends Component {
 
@@ -43,6 +45,7 @@ class Signup extends Component {
     }
 
 
+
     openWidget = (e) => {
         e.preventDefault()
         window.cloudinary.createUploadWidget(
@@ -62,6 +65,7 @@ class Signup extends Component {
     }
 
     render() {
+        console.log(this.props.currentUser)
         return (
             <div className="container" id="container">
                 <div className="form-container sign-in-container">
@@ -84,6 +88,7 @@ class Signup extends Component {
                         </div>
                     </div>
                 </div>
+                 {/* <NavDot/> */}
             </div >
 
         )

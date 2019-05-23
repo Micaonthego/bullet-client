@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import './App.css';
+import './Signin.css';
+// import NavDot from './NavDot'
 import { Link } from 'react-router-dom'
 
 class Signin extends Component {
@@ -15,6 +16,7 @@ class Signin extends Component {
             [e.target.name]: e.target.value
         })
     }
+
 
     userSignin = () => {
         fetch('http://localhost:3000/login', {
@@ -68,6 +70,7 @@ class Signin extends Component {
                         </div>
                     </div>
                 </div>
+                 {/* <NavDot/> */}
             </div >
         )
     }

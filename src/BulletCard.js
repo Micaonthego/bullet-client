@@ -1,12 +1,11 @@
 import React from 'react'
-import { FaTrashAlt } from 'react-icons/fa';
+// import { FaTrashAlt } from 'react-icons/fa';
 
 function BulletCard(props) {
     console.log(props)
     return (
         <div className="row">
             <div className="col-1-of-3">
-                <button onClick={() => props.deleteBullet(props.bullet.id)}><FaTrashAlt  /></button>
                 <div className="card">
                     <div className="card__side card__side--front">
                         <div className="card__picture card__picture--1">
@@ -32,7 +31,10 @@ function BulletCard(props) {
                     </div>
                 </div>
             </div>
+            <br/>
+            <button onClick={() => props.deleteBullet(props.bullet.id)}>Delete</button>
         </div>
+        
     )
 }
 
