@@ -5,6 +5,8 @@ import Signup from './Signup'
 import Landing from './Landing'
 import Signin from './Signin'
 import HomeDeck from './HomeDeck'
+import About from './About'
+
 // import NavDot from './NavDot'
 import Calendar from './Calendar'
 
@@ -80,6 +82,7 @@ class App extends Component {
           <Route path='/signup' render={(props) => {
             return <Signup setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
           }} />
+          <Route path='/about' component={About} />
           <Route path='/' component={Landing} />
         </Switch>
         {/* <NavDot/> */}

@@ -6,6 +6,7 @@
     "cloudinary-react": "^1.1.0",
     "moment": "^2.24.0",
     "react": "^16.8.6",
+    "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
     "react-moment": "^0.9.2",

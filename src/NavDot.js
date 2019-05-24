@@ -1,35 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaBars } from 'react-icons/fa';
+import { IconContext } from "react-icons";
 import './Nav.css';
 
 
-function NavDot() {
+    function NavDot() {
+        return (
+           <IconContext.Provider value={{ color: "black", className: "global-class-name", size: "3em" }}>
+         <nav role="navigation">
+  <ul className="dropdown">
+    <li className="bars"><FaBars/>
+    <ul>
+        <li className="bars"><Link to='/homedeck'>HOME</Link></li>
+        <li className="bars"><Link to='/about'>ABOUT</Link></li>
+        <li className="bars"><Link to='/calendar'>CALENDAR</Link></li>
+        <li className="bars"><a href="#">TIMELINE</a></li>
+        <li className="bars"><Link to='/'>LOGOUT</Link></li>
+      </ul>
+      </li>
+  </ul>
+</nav>
+</IconContext.Provider>
+        )
+    }
 
-  
-    
-    return (
-        <React.Fragment>
-  <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle"></input>
-
-            <label for="navi-toggle" class="navigation__button">
-                <span class="navigation__icon">&nbsp;</span>
-            </label>
-
-            <div class="navigation__background">&nbsp;</div>
-
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natous</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
-                    </ul>
-            </nav>
-        </div>
-        </React.Fragment>
-    )
-}
-
-export default NavDot;
+    export default NavDot;

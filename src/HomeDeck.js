@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Profile from './Profile'
+import NavDot from './NavDot'
 import NewBullet from './NewBullet'
 
 class HomeDeck extends Component {
@@ -11,6 +12,7 @@ class HomeDeck extends Component {
        
         return (
             <div>
+                <NavDot />
                 <Profile currentUser={this.props.currentUser} bullets={this.props.bullets} />
                 <br/>
                 <br/>

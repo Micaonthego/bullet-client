@@ -96,7 +96,6 @@ input {
 }
 
 .form-container {
-    /* background-image: url(./writting.jpg); */
   position: absolute;
   top: 0;
   height: 100%;
@@ -212,4 +211,12 @@ input {
 p {
     color: white;
 }
+
+.signin {
+    background-image: url(./writting.jpg)
+}
+ 
+
+
+
 

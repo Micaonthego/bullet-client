@@ -7,7 +7,7 @@
   padding: 2rem;
   padding-left: 1rem;
   font-size: 1.5rem;
-  transform: skewX(-12deg);
+  /* transform: skewX(-12deg); */
 text-align: center; }
   .profile__shape {
     width: 12rem;
@@ -18,7 +18,7 @@ text-align: center; }
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     /* moves profile shape left/right on x and up/down on Y, skew is for degrees  */
-    transform: translateX(5rem) skewX(12deg);
+    transform: translateX(3.5rem) ;
     position: relative; }
   .profile__img {
     height: 100%;
@@ -27,7 +27,7 @@ text-align: center; }
     backface-visibility: hidden;
     transition: all .5s; }
   .profile__text {
-    transform: skewX(-1deg); }
+    transform: skewX(0deg); }
   .profile__caption {
     position: absolute;
     top: 50%;

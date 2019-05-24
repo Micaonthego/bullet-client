@@ -18,7 +18,7 @@ function Profile(props) {
                         <div className="profile__text">
                             <h3 className="heading-tertiary u-margin-bottom-small">Aspiration</h3>
                             <h4>
-                               {props.currentUser.aspiration}
+                              "{props.currentUser.aspiration}"
                             </h4>
                         </div>
                     </div>
