@@ -1,6 +1,8 @@
 import React from 'react'
 // import { FaTrashAlt } from 'react-icons/fa';
 import './BulletCard.css';
+import { Link } from 'react-router-dom'
+
 
 
 function BulletCard(props) {
@@ -14,7 +16,7 @@ function BulletCard(props) {
                             {/* <img src={props.bullet.photo}> */}
                             &nbsp;
                             {/* </img> */}
-                                </div>
+                        </div>
                         <h4 className="card__heading">
                             <span className="card__heading-span card__heading-span--1">{props.bullet.date}</span>
                         </h4>
@@ -25,24 +27,26 @@ function BulletCard(props) {
                                 <div className="card__details">
                                     <ul>
                                         <li>I AM GRATEFUL FOR</li>
-                                        <li> <img src="./whitebullet.png" alt="Logo" className="logo" />    {props.bullet.gratitude}</li>
+                                        <li>{props.bullet.gratitude}</li>
                                         <li>I WILL PRIORITIZE</li>
-                                        <li> <img src="./whitebullet.png" alt="Logo" className="logo" />    {props.bullet.priority}</li>
+                                        <li>{props.bullet.priority}</li>
                                         <li>I HAVE ACCOMPLISHED</li>
-                                        <li> <img src="./whitebullet.png" alt="Logo" className="logo" />    {props.bullet.accomplishment}</li>
+                                        <li>{props.bullet.accomplishment}</li>
                                         <li>I AM FEELING</li>
-                                        <li> <img src="./whitebullet.png" alt="Logo" className="logo" />    {props.bullet.reflection}</li>
-                                    </ul>                                        
+                                        <li>{props.bullet.reflection}</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br/>
+            <br />
             <button onClick={() => props.deleteBullet(props.bullet.id)}>Delete</button>
+            <button>Like</button>
+            <Link to={`/homedeck/${props.bullet.id}`}><button>Edit</button></Link>
         </div>
-        
+
     )
 }
 

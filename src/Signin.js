@@ -36,8 +36,8 @@ class Signin extends Component {
                 } else {
                     this.props.setCurrentUser(response)
                 }
+                this.props.history.push(`/homedeck`)
             })
-        this.props.history.push(`/homedeck`)
     }
 
     // fetch for create user or lookup user 

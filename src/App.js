@@ -18,51 +18,70 @@ class App extends Component {
   }
 
   setCurrentUser = (response) => {
-    this.setState({
-      currentUser: response.user, 
-      bullets: response.user.bullets
-    }, () => {
-      localStorage.setItem("token", response.token)
-    })
+    console.log(response)
+    if (localStorage.getItem('token')) {
+      this.setState({
+        currentUser: response,
+        bullets: response.bullets
+      })
+    } else {
+      this.setState({
+        currentUser: response.user,
+        bullets: response.user.bullets
+      }, () => {
+        localStorage.setItem("token", response.token)
+      })
+    }
+    // window.location.reload(true)
   }
 
 
-          addBullet = (newBullet) => {
-            fetch('http://localhost:3000/bullets', {
-            method: 'POST',
-            headers:
-                { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token') },
-            body: JSON.stringify({ bullet: newBullet })
-        })
-            .then(res => res.json())
-            .then((response) => {
-                if (response.errors) {
-                    alert("Please check your info 🙃")
-                } else {
-                  this.setState({bullets: [...this.state.bullets, response]})
-                }
-                // this.props.history.push(`/calendar`)
-            }
-            )
-    }
+  addBullet = (newBullet) => {
+    fetch('http://localhost:3000/bullets', {
+      method: 'POST',
+      headers:
+        { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token') },
+      body: JSON.stringify({ bullet: newBullet })
+    })
+      .then(res => res.json())
+      .then((response) => {
+        if (response.errors) {
+          alert("Please check your info 🙃")
+        } else {
+          this.setState({ bullets: [...this.state.bullets, response] })
+        }
+        // this.props.history.push(`/calendar`)
+      }
+      )
+  }
 
-    deleteBullet = (id) => {
-        fetch(`http://localhost:3000/bullets/${id}`, {
-            method: 'DELETE',
-            headers:
-                { 'Authorization': localStorage.getItem('token') },
-        })
-            .then(res => res.json())
-            .then(resp => {
-                this.setState(prevState => {
-                    let bulletData = prevState.bullets.filter(bullet => bullet.id !== resp.id)
-                    return {
-                        bullets: bulletData
-                    }
+  afterUpdate = (updatedBullet) => {
+    const updatedBullets = this.state.bullets.map((bullet) => {
+      return bullet.id === updatedBullet.id ? updatedBullet : bullet
+    })
+    this.setState({ bullets: updatedBullets })
+  }
 
-                })
-            })
-    }
+
+
+
+  deleteBullet = (id) => {
+    fetch(`http://localhost:3000/bullets/${id}`, {
+      method: 'DELETE',
+      headers:
+        { 'Authorization': localStorage.getItem('token') },
+    })
+      .then(res => res.json())
+      .then(resp => {
+        this.setState(prevState => {
+          let bulletData = prevState.bullets.filter(bullet => bullet.id !== resp.id)
+          return {
+            bullets: bulletData
+          }
+
+        })
+      })
+  }
 
 
   render() {
@@ -71,10 +90,26 @@ class App extends Component {
       < React.Fragment >
         <Switch>
           <Route path='/calendar' render={(props) => {
-            return <Calendar deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} />
+            return <Calendar deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} setCurrentUser={this.setCurrentUser} />
           }} />
-          <Route path='/homedeck' render={(props) => {
-            return <HomeDeck  addBullet={this.addBullet} bullets={this.state.bullets} setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser}  {...props} />
+          <Route exact path='/homedeck/:id' render={(props) => {
+            const id = props.match.params.id
+            const currentBullet = this.state.bullets.find(bullet => bullet.id === parseInt(id))
+            return (
+              <HomeDeck
+                addBullet={this.addBullet}
+                bullets={this.state.bullets}
+                setCurrentUser={this.setCurrentUser}
+                currentUser={this.state.currentUser}
+                currentBullet={currentBullet}
+                afterUpdate={this.afterUpdate}
+                {...props}
+              />
+            )
+          }} />
+          <Route exact path='/homedeck' render={(props) => {
+            return <HomeDeck addBullet={this.addBullet} bullets={this.state.bullets} setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser}
+              afterUpdate={this.afterUpdate} {...props} />
           }} />
           <Route path='/signin' render={(props) => {
             return <Signin setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
@@ -92,4 +127,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default App;
