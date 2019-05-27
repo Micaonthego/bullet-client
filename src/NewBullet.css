@@ -1,0 +1,74 @@
+form.new-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* padding: 0 50px; */
+    height: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+container.new-bullet {
+    /* background-color: black; */
+    opacity: .88;
+    flex: none;
+    align-items: center;
+     border-radius: 5px;
+     width: 90%;
+      border: 2px solid rgba(238, 238, 238, 1);
+      box-shadow: 10px 15px 25px -5px #000000;
+}
+
+input.new-bullet {
+    background-color: white;
+    /* border-radius: 15px; */
+    padding: 5px 15px;
+    margin: 8px;
+    width: 100%;
+    /* border: 2px solid rgba(238, 238, 238, 1); */
+    /* margin-bottom: 5%;
+    margin-top: -5% */
+     border: none;
+     border-bottom: 1px solid rgba(238, 238, 238, 1);
+     color: #000;
+     box-sizing: border-box;
+}
+
+/* ::placeholder {
+    font-size: 14px;
+    text-align: center;
+} */
+
+label {
+    font-size: 14px;
+    color: black;
+}
+
+button.black {
+    background-color:black;
+    padding: 10px 20px;
+    
+}
+
+/* div.day-log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+div.night-log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+} */

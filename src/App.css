@@ -28,8 +28,8 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 20px;
+  left: 20px;
 }
 
 .logo {
@@ -42,7 +42,7 @@ body {
 .text-box {
   position: absolute;
   /* % in relation to parent element */
-  top: 40%;
+  top: 45%;
   left: 50%;
   /* in relation to the element itself */
   transform: translate(-50%, -50%);
@@ -55,7 +55,7 @@ body {
 
   backface-visibility: hidden;
   /* hack to fix shakiness seen in animations */
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .heading-primary-main {
@@ -112,10 +112,6 @@ body {
     transform: translate(0);
   }
 }
-
-
-
-
 
 
 

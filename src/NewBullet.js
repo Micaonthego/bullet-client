@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { FaCameraRetro } from 'react-icons/fa';
+import './NewBullet.css';
+import { IconContext } from "react-icons";
+import { FaCameraRetro, FaSun } from 'react-icons/fa';
 import { withRouter } from 'react-router-dom'
 
 class NewBullet extends Component {
@@ -16,7 +18,12 @@ class NewBullet extends Component {
 
     componentDidMount() {
         if (this.props.currentBullet) {
-            this.setState({ gratitude: this.props.currentBullet.gratitude })
+            this.setState({
+                gratitude: this.props.currentBullet.gratitude,
+                priority: this.props.currentBullet.priority,
+                accomplishment: this.props.currentBullet.accomplishment,
+                reflection: this.props.currentBullet.reflection
+            })
         }
     }
 
@@ -92,15 +99,29 @@ class NewBullet extends Component {
         console.log(this.props.history)
         return (
             <React.Fragment>
-                <form onSubmit={this.createBullet}>
-                    <input value={this.state.gratitude} onChange={this.onChange} type="text" placeholder="I am grateful for..." name="gratitude" />
-                    <input onChange={this.onChange} type="text" placeholder="I want to prioritize..." name="priority" />
-                    <input onChange={this.onChange} type="text" placeholder="I have accomplished..." name="accomplishment" />
-                    <input onChange={this.onChange} type="text" placeholder="I am feeling..." name="reflection" />
-                    <button onClick={this.openWidget}><FaCameraRetro /></button>
-                    <br />
-                    <button>Submit</button>
-                </form>
+                <IconContext.Provider value={{ color: "black", className: "global-class-name", size: "1.50em" }}>
+                <container className="new-bullet">
+                    <form className="new-bullet" onSubmit={this.createBullet}>
+                        <div className="day-log">
+                            <label>I am greatful for</label>
+                            <input className="new-bullet" value={this.state.gratitude} onChange={this.onChange} type="text" name="gratitude" />
+                            <label>I want to prioritize</label>
+                            <input className="new-bullet" value={this.state.priority} onChange={this.onChange} type="text" name="priority" />
+
+                        </div>
+                        <div className="night-log">
+                            <label>I have accomplished</label>
+                            <input className="new-bullet" value={this.state.accomplishment} onChange={this.onChange} type="text" name="accomplishment" />
+                            <label>I am feeling</label>
+                            <input className="new-bullet" value={this.state.reflection} onChange={this.onChange} type="text" name="reflection" />
+                        </div>
+                        <div className="buttons">
+                            <FaCameraRetro onClick={this.openWidget} />
+                            <br />
+                            <button className="black">Submit</button>
+                        </div>
+                    </form>
+                </container>
 
                 {/* {this.props.bullets.find(bullet => {
                     return bullet.date === this.state.date ? null :
@@ -114,10 +135,10 @@ class NewBullet extends Component {
                             <button>Submit</button>
                         </form>
                 })} */}
+                </IconContext.Provider>
             </React.Fragment>
         )
     }
 
 }
-
 export default withRouter(NewBullet)

@@ -88,7 +88,7 @@ class Signup extends Component {
                         </div>
                     </div>
                 </div>
-                 {/* <NavDot/> */}
+                {/* <NavDot/> */}
             </div >
 
         )
@@ -96,5 +96,6 @@ class Signup extends Component {
 }
 
 export default Signup
+
 
 

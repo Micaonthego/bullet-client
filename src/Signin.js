@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import './Signin.css';
-// import NavDot from './NavDot'
+import './App.css';
+import { IconContext } from "react-icons";
 import { Link } from 'react-router-dom'
+import { FaArrowRight } from 'react-icons/fa';
 
 class Signin extends Component {
 
@@ -48,30 +50,33 @@ class Signin extends Component {
 
     render() {
         return (
-            <div className="container" id="container">  
-                <div className="form-container sign-in-container">
-                    <form onSubmit={this.handleSubmit} action="#">
-                        <h1 className="black-text">Sign in</h1>
-                        <input onChange={this.onChange} type="text" placeholder="Username" name='username' />
-                        <input onChange={this.onChange} type="password" placeholder="Password" name="password" />
-                        <br />
-                        <br />
-                        <button>Sign In</button>
-                    </form>
-                </div>
-                <div className="overlay-container">
-                    <div className="overlay">
-                        <div className="overlay-panel overlay-right">
-                            <h1>Welcome Back!</h1>
-                            <p>
-                                To keep connected with us please login with your personal info or click to signup
-            </p>
-                            <button className="ghost" id="signIn"><Link to='/signup'>Sign Up</Link></button>
+            <IconContext.Provider value={{ color: "white", className: "global-class-name", size: "1.50em" }}>
+            <div className="Landing">
+                <header className="header">
+                    <div className="logo-box">
+                        <img src="./whitebullet.png" alt="Logo" className="logo" />
+                    </div>
+                    <div className='text-box'>
+                        <h1 className='heading-primary'>
+                            <span className='heading-primary-main'>BULLET.</span>
+                            <span className='heading-primary-sub'>you don't have to slow down to get in touch with yourself</span>
+                        </h1>
+                        <div>
+                            <form id="signin" onSubmit={this.handleSubmit} action="#">
+                                <input className="signin" onChange={this.onChange} type="text" placeholder="Username" name='username' />
+                                <br/>
+                                <input className="signin" onChange={this.onChange} type="password" placeholder="Password" name="password" />
+                                    <button>
+                                       <FaArrowRight/>
+                </button>
+                            </form>
+                                <Link to="/signup">Create Account</Link>
+                                <br/>
                         </div>
                     </div>
-                </div>
-                 {/* <NavDot/> */}
-            </div >
+                </header>
+            </div>   
+            </IconContext.Provider>
         )
     }
 }

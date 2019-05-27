@@ -1,14 +1,22 @@
 .row {
   max-width: 114rem;
-  margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3); }
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
 
 .card {
   perspective: 75rem;
@@ -60,11 +68,6 @@
   border-top-right-radius: 3px;
 }
 
-.card__picture--1 {
-  background-image: 
-  url(./balloons.jpg);
-}
-
 
 .card__heading {
   font-size: 6.8rem;
@@ -100,13 +103,10 @@
 
 .card__details ul li {
   text-align: center;
-  font-size: 1rem;
+  font-size: .65rem;
   padding: .5rem;
 }
 
-/* .card__details ul li:not(:last-child) {
-  border-bottom: 1px solid #eee;
-} */
 
 .card__cta {
   position: absolute;
@@ -123,8 +123,13 @@
   margin-bottom: 1rem;
 }
 
-.logo {
-  height: 20px;
-  /* best to control height of element and have browser figure out the rest */
+span.icons {
+  /* display: flex;
+  flex-direction: row; */
+  align-items: center;
+}
 
+.responsive {
+  width: 100%;
+  height: 100%;
 }
