@@ -9,21 +9,22 @@ function Profile(props) {
        console.log("I'm in the if")
        return (    
 <div>
-    <div className="row">
                     <div className="profile">
+                   <div className="profile__text">
+                        <h3>PROFILE</h3>
+                        </div>
                         <figure className="profile__shape">
                             <img src={props.currentUser.photo} alt="Profile" className="profile__img"></img>
                             <figcaption className="profile__caption">{props.currentUser.username}</figcaption>
                         </figure>
                         <div className="profile__text">
-                            <h3 className="heading-tertiary u-margin-bottom-small">Aspiration</h3>
-                            <h4>
+                            <h3>Aspiration</h3>
+                            <h6>
                               "{props.currentUser.aspiration}"
-                            </h4>
+                            </h6>
                         </div>
                     </div>
                 </div>
-</div>
     )
 } else {
     return <div>Loading</div>

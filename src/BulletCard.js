@@ -1,21 +1,22 @@
 import React from 'react'
-// import { FaTrashAlt } from 'react-icons/fa';
+import { FaTrashAlt, FaPen, FaRegHeart } from 'react-icons/fa';
 import './BulletCard.css';
 import { Link } from 'react-router-dom'
+import { IconContext } from "react-icons";
 
 
 
 function BulletCard(props) {
     console.log(props)
     return (
+        <IconContext.Provider value={{ color: "white", className: "global-class-name", size: "1.25em" }}>
         <div className="row">
             <div className="col-1-of-3">
                 <div className="card">
                     <div className="card__side card__side--front">
                         <div className="card__picture card__picture--1">
-                            {/* <img src={props.bullet.photo}> */}
-                            &nbsp;
-                            {/* </img> */}
+                            <img className="responsive" src={props.bullet.photo}>
+                            </img>
                         </div>
                         <h4 className="card__heading">
                             <span className="card__heading-span card__heading-span--1">{props.bullet.date}</span>
@@ -35,6 +36,10 @@ function BulletCard(props) {
                                         <li>I AM FEELING</li>
                                         <li>{props.bullet.reflection}</li>
                                     </ul>
+                                    <span className="icons"><FaTrashAlt onClick={() => props.deleteBullet(props.bullet.id)} />
+                                    <FaRegHeart/>
+                                    <Link to={`/homedeck/${props.bullet.id}`}><FaPen/></Link>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -42,10 +47,8 @@ function BulletCard(props) {
                 </div>
             </div>
             <br />
-            <button onClick={() => props.deleteBullet(props.bullet.id)}>Delete</button>
-            <button>Like</button>
-            <Link to={`/homedeck/${props.bullet.id}`}><button>Edit</button></Link>
         </div>
+        </IconContext.Provider>
 
     )
 }

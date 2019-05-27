@@ -1,0 +1,14 @@
+.main-page {
+display: grid;
+grid-template-columns: 40% 50%;
+grid-gap: 10%;
+/* padding-left: 5%;
+padding-right: 5%; */
+margin-top: 5%;
+margin-left: -15%;
+margin-right: 0%;
+}
+
+/* body {
+    background-image: url(./writting.jpg);
+} */

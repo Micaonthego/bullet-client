@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Profile from './Profile'
+import './Homedeck.css';
 import NavDot from './NavDot'
 import NewBullet from './NewBullet'
 
@@ -41,15 +42,16 @@ class HomeDeck extends Component {
         return (
             <React.Fragment>
                 <NavDot />
+                <container className="main-page">
                 <Profile currentUser={this.props.currentUser} bullets={this.props.bullets} />
-                <br />
-                <br />
                 <NewBullet addBullet={this.props.addBullet}
                     bullets={this.props.bullets}
                     setCurrentUser={this.props.setCurrentUser}
                     currentBullet={this.props.currentBullet}
                     afterUpdate={this.props.afterUpdate}
                 />
+                </container>
+                
             </React.Fragment>
         )
     }
@@ -57,4 +59,3 @@ class HomeDeck extends Component {
 
 
 export default HomeDeck
-
