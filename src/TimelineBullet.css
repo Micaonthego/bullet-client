@@ -63,7 +63,7 @@
 }
 
 /* Add arrows to the left container (pointing right) */
-.left::before {
+/* .left::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -74,10 +74,10 @@
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
-}
+} */
 
 /* Add arrows to the right container (pointing left) */
-.right::before {
+/* .right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -88,7 +88,7 @@
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
-}
+} */
 
 /* Fix the circle for containers on the right side */
 .right::after {
@@ -136,5 +136,7 @@
     .right {
         left: 0%;
     }
+
+    
 
 }

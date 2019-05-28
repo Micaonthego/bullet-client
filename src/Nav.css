@@ -36,8 +36,9 @@ ul {
 
 .menu-wrap {
   position: fixed;
-  top: 2.7%;
-  left: 50;
+  top: 2.75%;
+  margin-left: 93%;
+  border-left-style: 50;
   z-index: 1;
 }
 
