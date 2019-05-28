@@ -68,7 +68,6 @@ class Signup extends Component {
         console.log(this.props.currentUser)
         return (
             <div className="container" id="container">
-                <div className="form-container sign-in-container">
                     <form onSubmit={this.createUser} action="#">
                         <h1 className="black-text">Create Account</h1>
                         <input onChange={this.onChange} type="text" placeholder="Username" name="username" />
@@ -80,17 +79,6 @@ class Signup extends Component {
                         <button>Sign Up</button>
                     </form>
                 </div>
-                <div className="overlay-container">
-                    <div className="overlay">
-                        <div className="overlay-panel overlay-right">
-                            <h1>Hello, Friend!</h1>
-                            <p>Enter your personal details and start journey with us</p>
-                        </div>
-                    </div>
-                </div>
-                {/* <NavDot/> */}
-            </div >
-
         )
     }
 }

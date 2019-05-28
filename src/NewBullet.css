@@ -9,7 +9,7 @@ form.new-bullet {
     margin: auto;
 }
 
-container.new-bullet {
+div.new-bullet {
     /* background-color: black; */
     opacity: .88;
     flex: none;
@@ -26,6 +26,7 @@ input.new-bullet {
     padding: 5px 15px;
     margin: 8px;
     width: 100%;
+    flex: none;
     /* border: 2px solid rgba(238, 238, 238, 1); */
     /* margin-bottom: 5%;
     margin-top: -5% */
