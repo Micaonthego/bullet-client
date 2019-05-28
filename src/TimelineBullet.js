@@ -2,6 +2,7 @@ import React from 'react'
 import './TimelineBullet.css';
 import { FaTrashAlt, FaPen, FaRegHeart, FaHeart } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
 function TimelineBullet(props) {
     // console.log(props)
@@ -46,6 +47,7 @@ function TimelineBullet(props) {
                 </div>
             </div>
         </div>
+        <Footer/>
             </React.Fragment>
     )
 }

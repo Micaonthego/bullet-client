@@ -8,6 +8,7 @@ body {
   background-color: #fff;
   /* padding around website */
   padding: 25px;
+  height: 100vh;
 }
 
 /* setting style for entire header/homepage */
@@ -102,6 +103,3 @@ body {
     transform: translate(0);
   }
 }
-
-
-

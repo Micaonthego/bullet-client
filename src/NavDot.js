@@ -21,7 +21,7 @@ class NavDot extends React.Component {
               <img src="./blackbullet.png" className="logo" alt="logo" />
             </a>
           </li>
-          <li className="bullet-logo">BULLET.</li>
+          <li className="bullet-logo"></li>
               <li className="menu-wrap">
                 <input type="checkbox" className="toggler" />
                 <div className="cool">

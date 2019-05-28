@@ -5,12 +5,12 @@ ul {
 
 .bullet {
   display: flex;
-  height: 46px;
+  height: 8vh;
   align-items: center;
   padding: 0 15px;
-  border: 1px solid rgba(238, 238, 238, 1);
+  /* border: 1px solid rgba(238, 238, 238, 1);
   border-radius: 5px;
-  box-shadow: 10px 15px 25px -5px #000000;
+  box-shadow: 10px 15px 25px -20px rgb(0, 0, 0, 0.8); */
 }
 
 .bullet-logo {
@@ -26,8 +26,8 @@ ul {
 }
 
 .logo {
-  max-height: 45px;
-  max-width: 45px;
+  max-height: 65px;
+  max-width: 65px;
 }
 
 .bullet li {
@@ -160,6 +160,7 @@ ul {
   transition: opacity 0.4s ease;
   opacity: 0;
 }
+
 /* link colors, size and padding */
 .menu-wrap .menu>div>div>ul>li {
   list-style: none;
