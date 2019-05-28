@@ -19,42 +19,41 @@ class NavDot extends React.Component {
           <li className="bullet-logo">
             <a href="/">
               <img src="./blackbullet.png" className="logo" alt="logo" />
- </a>
+            </a>
           </li>
           <li className="bullet-logo">BULLET.</li>
           <li>
-            <li className="menu-wrap">
-              <input type="checkbox" className="toggler" />
-              <div className="cool">
-                <div />
-              </div>
-              <div className="menu">
-                <div>
+            <ul>
+              <li className="menu-wrap">
+                <input type="checkbox" className="toggler" />
+                <div className="cool">
+                  <div />
+                </div>
+                <div className="menu">
                   <div>
-                    <ul>
-                      <li>
-                        <a href="/homedeck">HOME</a>
-                      </li>
-                      <li>
-                        <a href="/about">ABOUT</a>
-                      </li>
-                      <li>
-                        <a href="/calendar">CALENDAR</a>
-                      </li>
-                      <li>
-                        <a href="/timeline">TIMELINE</a>
-                      </li>
-                      <li>
-                        <a onClick={this.logOut} href="/" >LOGOUT</a>
-                      </li>
-                    </ul>
+                    <div>
+                      <ul>
+                        <li>
+                          <a href="/homedeck">HOME</a>
+                        </li>
+                        <li>
+                          <a href="/about">ABOUT</a>
+                        </li>
+                        <li>
+                          <a href="/calendar">CALENDAR</a>
+                        </li>
+                        <li>
+                          <a href="/timeline">TIMELINE</a>
+                        </li>
+                        <li>
+                          <a onClick={this.logOut} href="/" >LOGOUT</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <p>{"empty"}</p>
-            </li>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
