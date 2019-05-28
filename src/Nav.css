@@ -26,8 +26,8 @@ ul {
 }
 
 .logo {
-  max-height: 40px;
-  max-width: 40px;
+  max-height: 45px;
+  max-width: 45px;
 }
 
 .bullet li {
@@ -36,8 +36,9 @@ ul {
 
 .menu-wrap {
   position: fixed;
-  top: 2.7%;
-  left: 50;
+  top: 2.75%;
+  margin-left: 93%;
+  border-left-style: 50;
   z-index: 1;
 }
 

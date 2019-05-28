@@ -22,8 +22,6 @@ class NavDot extends React.Component {
             </a>
           </li>
           <li className="bullet-logo">BULLET.</li>
-          <li>
-            <ul>
               <li className="menu-wrap">
                 <input type="checkbox" className="toggler" />
                 <div className="cool">
@@ -54,8 +52,6 @@ class NavDot extends React.Component {
                 </div>
               </li>
             </ul>
-          </li>
-        </ul>
       </div>
     );
   }

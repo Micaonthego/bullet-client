@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom'
 function TimelineBullet(props) {
     // console.log(props)
     return (
-        <div class="timeline">
+        <React.Fragment>    
+        <div className="timeline">
             <div className={props.index % 2 === 0 ? "container left" : "container right"}>
-                <div class="content">
+                <div className="content">
                     <div className="card">
                         <div className="card__side card__side--front">
                             <div className="card__picture card__picture--1">
@@ -45,6 +46,7 @@ function TimelineBullet(props) {
                 </div>
             </div>
         </div>
+            </React.Fragment>
     )
 }
 

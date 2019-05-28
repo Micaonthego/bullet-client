@@ -3,6 +3,7 @@ import Profile from './Profile'
 import './Homedeck.css';
 import NavDot from './NavDot'
 import NewBullet from './NewBullet'
+import Footer from './Footer'
 
 class HomeDeck extends Component {
 
@@ -53,7 +54,7 @@ class HomeDeck extends Component {
                     updateLike={this.props.updateLike}
                 />
                 </div>
-                
+                <Footer/>
             </React.Fragment>
         )
     }
