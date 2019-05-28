@@ -35,7 +35,7 @@ class Calendar extends Component {
     }
 
     renderBullets = () => {
-        return this.props.bullets.map(bullet => <BulletCard deleteBullet={this.props.deleteBullet} key={bullet.id} bullet={bullet} />)
+        return this.props.bullets.map(bullet => <BulletCard deleteBullet={this.props.deleteBullet} key={bullet.id} bullet={bullet} updateLike={this.props.updateLike} />)
     }
 
     // deleteBullet = (id) => {

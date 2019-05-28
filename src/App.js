@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import Signup from './Signup'
 import Signin from './Signin'
 import HomeDeck from './HomeDeck'
@@ -50,7 +50,7 @@ class App extends Component {
         } else {
           this.setState({ bullets: [...this.state.bullets, response] })
         }
-        // this.props.history.push(`/calendar`)
+        this.props.history.push(`/calendar`)
       }
       )
   }
@@ -61,8 +61,6 @@ class App extends Component {
     })
     this.setState({ bullets: updatedBullets })
   }
-
-
 
 
   deleteBullet = (id) => {
@@ -83,6 +81,34 @@ class App extends Component {
       })
   }
 
+  updateBullet = (id, data) => {
+    fetch(`http://localhost:3000/bullets/${id}`, {
+      method: 'PATCH',
+      headers:
+        { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token') },
+      // pass whole obj
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(response => this.afterUpdate(response))
+    this.props.history.push(`/calendar`)
+  }
+
+  updateLike = (data) => {
+    fetch(`http://localhost:3000/bullets/${data.id}`, {
+      method: 'PATCH',
+      headers:
+      {
+        'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': localStorage.getItem('token'),
+        'Favorite': 'favorite'
+      },
+      body: JSON.stringify({ favorite: !data.favorite })
+    })
+      .then(res => res.json())
+      .then(response => this.afterUpdate(response))
+  }
+
+
 
   render() {
     console.log(this.state.currentUser)
@@ -90,7 +116,7 @@ class App extends Component {
       < React.Fragment >
         <Switch>
           <Route path='/calendar' render={(props) => {
-            return <Calendar deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} setCurrentUser={this.setCurrentUser} />
+            return <Calendar updateLike={this.updateLike} deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} setCurrentUser={this.setCurrentUser} />
           }} />
           <Route exact path='/homedeck/:id' render={(props) => {
             const id = props.match.params.id
@@ -102,7 +128,7 @@ class App extends Component {
                 setCurrentUser={this.setCurrentUser}
                 currentUser={this.state.currentUser}
                 currentBullet={currentBullet}
-                afterUpdate={this.afterUpdate}
+                updateBullet={this.updateBullet}
                 {...props}
               />
             )
@@ -118,13 +144,11 @@ class App extends Component {
           <Route path='/' render={(props) => {
             return <Signin setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
           }} />
-          {/* <Route path='/' component={Landing} /> */}
         </Switch>
-        {/* <NavDot/> */}
       </React.Fragment >
 
     )
   }
 }
 
-export default App;
+export default withRouter(App);

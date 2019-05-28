@@ -1,10 +1,11 @@
 .profile {
-  width: 35%;
-  margin-left: 40%;
+  width: 50%;
+  margin-left: 50%;
   /* margin: 0 auto; */
-  /* box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1); */
+   border: 2px solid rgba(238, 238, 238, 1);
+   box-shadow: 10px 15px 25px -5px #000000;
   background-color: none;
-  /* border-radius: 35px; */
+  border-radius: 5px;
   padding: 2rem;
   padding-left: 1rem;
   font-size: 1.5rem;
@@ -20,7 +21,7 @@
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   /* moves profile shape left/right on x and up/down on Y, skew is for degrees  */
-  transform: translateX(3.5rem);
+  transform: translateX(5rem);
   position: relative;
 }
 
@@ -34,7 +35,7 @@
 
 .profile__text {
   width: 100%;
-  margin-left: 55%;
+  margin-left: 4%;
 }
 
 .profile__caption {

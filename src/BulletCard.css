@@ -98,13 +98,14 @@
 .card__details ul {
   list-style: none;
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 10%;
 }
 
 .card__details ul li {
   text-align: center;
-  font-size: .65rem;
-  padding: .5rem;
+  font-size: .75rem;
+  padding: .3rem;
 }
 
 
@@ -123,10 +124,21 @@
   margin-bottom: 1rem;
 }
 
-span.icons {
-  /* display: flex;
-  flex-direction: row; */
-  align-items: center;
+
+
+.trash {
+  margin-left: 50px;
+  margin-top:20%;
+}
+
+.heart {
+  margin-left: 50px;
+   margin-top:20%;
+}
+
+.edit {
+  margin-left: 50px;
+   margin-top:20%;
 }
 
 .responsive {
