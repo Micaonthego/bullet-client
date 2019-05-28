@@ -38,24 +38,6 @@ class Calendar extends Component {
         return this.props.bullets.map(bullet => <BulletCard deleteBullet={this.props.deleteBullet} key={bullet.id} bullet={bullet} updateLike={this.props.updateLike} />)
     }
 
-    // deleteBullet = (id) => {
-    //     fetch(`http://localhost:3000/bullets/${id}`, {
-    //         method: 'DELETE',
-    //         headers:
-    //             { 'Authorization': localStorage.getItem('token') },
-    //     })
-    //         .then(res => res.json())
-    //         .then(resp => {
-    //             this.setState(prevState => {
-    //                 let bulletData = prevState.bullets.filter(bullet => bullet.id !== resp.id)
-    //                 return {
-    //                     bullets: bulletData
-    //                 }
-
-    //             })
-    //         })
-    // }
-
     render() {
         // console.log(this.state.bullets)
         return (
