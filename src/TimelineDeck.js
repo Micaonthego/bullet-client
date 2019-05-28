@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import BulletCard from './BulletCard'
+import TimelineBullet from './TimelineBullet'
 import NavDot from './NavDot'
-
 class TimelineDeck extends Component {
 
     componentDidMount() {
@@ -37,7 +36,7 @@ class TimelineDeck extends Component {
 
         let likedBullets = this.props.bullets.filter((bullet) =>  bullet.favorite === true)
         console.log(likedBullets)
-            return likedBullets.map(bullet => <BulletCard deleteBullet={this.props.deleteBullet} key={bullet.id} bullet={bullet} updateLike={this.props.updateLike} />)
+            return likedBullets.map((bullet, index) => <TimelineBullet index={index}deleteBullet={this.props.deleteBullet} key={bullet.id} bullet={bullet} updateLike={this.props.updateLike} />)
     }
 
     render () {
