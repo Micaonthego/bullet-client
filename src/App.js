@@ -5,6 +5,8 @@ import Signup from './Signup'
 import Signin from './Signin'
 import HomeDeck from './HomeDeck'
 import About from './About'
+import TimelineDeck from './TimelineDeck'
+
 
 
 // import NavDot from './NavDot'
@@ -111,12 +113,15 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.currentUser)
+    console.log(this.state.bullets)
     return (
       < React.Fragment >
         <Switch>
           <Route path='/calendar' render={(props) => {
             return <Calendar updateLike={this.updateLike} deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} setCurrentUser={this.setCurrentUser} />
+          }} />
+          <Route path='/timeline' render={(props) => {
+            return <TimelineDeck updateLike={this.updateLike} deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} setCurrentUser={this.setCurrentUser} />
           }} />
           <Route exact path='/homedeck/:id' render={(props) => {
             const id = props.match.params.id
