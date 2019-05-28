@@ -1,4 +1,17 @@
 /* login/signup form  */
+
+.logo-box {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.logo-1 {
+  height: 75px;
+  /* best to control height of element and have browser figure out the rest */
+
+}
+
 h1 {
   font-weight: bold;
   margin: 0;

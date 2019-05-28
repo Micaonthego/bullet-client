@@ -26,17 +26,7 @@ body {
     /* set coordinates of corners of shape you want to be visible, this is wedge at bottom of header */
 }
 
-.logo-box {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
 
-.logo {
-  height: 65px;
-  /* best to control height of element and have browser figure out the rest */
-
-}
 
 
 .text-box {
