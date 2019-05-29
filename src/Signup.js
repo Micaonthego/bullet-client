@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import NavDot from './NavDot'
-import './Signin.css';
+import './signup.css';
 
 
 
@@ -67,18 +67,18 @@ class Signup extends Component {
     render() {
         console.log(this.props.currentUser)
         return (
-            <div className="container" id="container">
-                    <form onSubmit={this.createUser} action="#">
-                        <h1 className="black-text">Create Account</h1>
-                        <input onChange={this.onChange} type="text" placeholder="Username" name="username" />
-                        <input onChange={this.onChange} type="text" placeholder="Aspiration" name="aspiration" />
-                        <input onChange={this.onChange} type="password" placeholder="Password" name="password" />
-                        <br />
-                        <button onClick={this.openWidget}>+ Photo</button>
-                        <br />
-                        <button>Sign Up</button>
-                    </form>
-                </div>
+            <div className="signup" id="container">
+                <form className="signup" onSubmit={this.createUser} action="#">
+                    <h1 className="black-text">Create Account</h1>
+                    <input className="signup" onChange={this.onChange} type="text" placeholder="Username" name="username" />
+                    <input className="signup" onChange={this.onChange} type="text" placeholder="Aspiration" name="aspiration" />
+                    <input className="signup" onChange={this.onChange} type="password" placeholder="Password" name="password" />
+                    <br />
+                    <button className="black" onClick={this.openWidget}>+ Photo</button>
+                    <br />
+                    <button className="black">Sign Up</button>
+                </form>
+            </div>
         )
     }
 }

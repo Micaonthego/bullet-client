@@ -22,7 +22,8 @@ class NewBullet extends Component {
                 gratitude: this.props.currentBullet.gratitude,
                 priority: this.props.currentBullet.priority,
                 accomplishment: this.props.currentBullet.accomplishment,
-                reflection: this.props.currentBullet.reflection
+                reflection: this.props.currentBullet.reflection,
+                photo: this.props.currentBullet.photo
             })
         }
     }

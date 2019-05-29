@@ -1,11 +1,12 @@
 .row {
+  /* display: inline; */
   max-width: 114rem;
   margin: 0 auto;
   margin-top: 2%;
 }
 
 .row:not(:last-child) {
-  margin-bottom: 8rem;
+  margin-bottom: 1rem;
 }
 
 .row::after {
@@ -15,8 +16,9 @@
 }
 
 .row .col-1-of-3 {
-  width: calc((100% - 2 * 6rem) / 3);
+  width: calc((100% - 2 * 6rem) / 4);
 }
+
 
 .card {
   perspective: 75rem;
@@ -128,17 +130,17 @@
 
 .trash {
   margin-left: 50px;
-  margin-top:20%;
+  margin-top: 20%;
 }
 
 .heart {
   margin-left: 50px;
-   margin-top:20%;
+  margin-top: 20%;
 }
 
 .edit {
   margin-left: 50px;
-   margin-top:20%;
+  margin-top: 20%;
 }
 
 .responsive {

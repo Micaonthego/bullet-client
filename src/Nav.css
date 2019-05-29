@@ -5,18 +5,18 @@ ul {
 
 .bullet {
   display: flex;
-  height: 46px;
+  height: 8vh;
   align-items: center;
   padding: 0 15px;
-  border: 1px solid rgba(238, 238, 238, 1);
-  border-radius: 5px;
-  box-shadow: 10px 15px 25px -5px #000000;
+  /* border: 1px solid rgba(238, 238, 238, 1); */
+  /* border-radius: 5px; */
+  /* box-shadow: 10px 15px 25px -20px rgb(0, 0, 0, 0.8);  */
 }
 
 .bullet-logo {
   /* margin-left: auto; */
   margin-right: auto;
-  margin-top: auto;
+  margin-top: 1.2%;
   font-size: 1.6em;
   color: black;
 }
@@ -26,8 +26,8 @@ ul {
 }
 
 .logo {
-  max-height: 45px;
-  max-width: 45px;
+  max-height: 65px;
+  max-width: 65px;
 }
 
 .bullet li {
@@ -36,8 +36,8 @@ ul {
 
 .menu-wrap {
   position: fixed;
-  top: 2.75%;
-  margin-left: 93%;
+  top: 4%;
+  margin-left: 92%;
   border-left-style: 50;
   z-index: 1;
 }
@@ -58,7 +58,7 @@ ul {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 55px;
+  width: 75px;
   height: 45px;
   padding: 1rem;
   display: flex;
@@ -160,6 +160,7 @@ ul {
   transition: opacity 0.4s ease;
   opacity: 0;
 }
+
 /* link colors, size and padding */
 .menu-wrap .menu>div>div>ul>li {
   list-style: none;

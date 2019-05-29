@@ -1,4 +1,4 @@
-form.new-bullet {
+form.signup {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,17 +9,17 @@ form.new-bullet {
     margin: auto;
 }
 
-div.new-bullet {
+div.signup {
     opacity: .88;
     flex: none;
     align-items: center;
-     border-radius: 5px;
-     width: 90%;
-      border: 2px solid rgba(238, 238, 238, 1);
-      box-shadow: 10px 15px 25px -5px #000000;
+    border-radius: 5px;
+    width: 30%;
+    border: 2px solid rgba(238, 238, 238, 1);
+    box-shadow: 10px 15px 25px -5px #000000;
 }
 
-input.new-bullet {
+input.signup {
     background-color: white;
     /* border-radius: 15px; */
     padding: 5px 15px;
@@ -29,10 +29,10 @@ input.new-bullet {
     /* border: 2px solid rgba(238, 238, 238, 1); */
     /* margin-bottom: 5%;
     margin-top: -5% */
-     border: none;
-     border-bottom: 1px solid rgba(238, 238, 238, 1);
-     color: #000;
-     box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
+    color: #000;
+    box-sizing: border-box;
 }
 
 /* ::placeholder {
@@ -46,8 +46,7 @@ label {
 }
 
 button.black {
-    background-color:black;
+    background-color: black;
     padding: 10px 20px;
-    
-}
 
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import BulletCard from './BulletCard'
-import NavDot from './NavDot'
-
+// import './App.css'
+import './BulletCard.css'
 class Calendar extends Component {
 
 
@@ -42,8 +42,8 @@ class Calendar extends Component {
         // console.log(this.state.bullets)
         return (
             <div>
-                <NavDot />
-                {this.renderBullets()}
+                <h1 style={{ color: "black" }}>CALENDAR</h1>
+                    {this.renderBullets()}
             </div>
         )
     }

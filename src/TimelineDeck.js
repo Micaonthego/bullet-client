@@ -34,16 +34,17 @@ class TimelineDeck extends Component {
 
     renderFavoriteBullets = () => {
 
-        let likedBullets = this.props.bullets.filter((bullet) =>  bullet.favorite === true)
+        let likedBullets = this.props.bullets.filter((bullet) => bullet.favorite === true)
         console.log(likedBullets)
-            return likedBullets.map((bullet, index) => <TimelineBullet index={index}deleteBullet={this.props.deleteBullet} key={bullet.id} bullet={bullet} updateLike={this.props.updateLike} />)
+        return likedBullets.map((bullet, index) => <TimelineBullet index={index} deleteBullet={this.props.deleteBullet} key={bullet.id} bullet={bullet} updateLike={this.props.updateLike} />)
     }
 
-    render () {
+    render() {
         console.log(this.props.bullets)
         return (
             <div>
-                <NavDot />
+                <h1 style={{ color: "black" }}>TIMELINE</h1>
+                {/* <NavDot /> */}
                 {this.renderFavoriteBullets()}
             </div>
         )
