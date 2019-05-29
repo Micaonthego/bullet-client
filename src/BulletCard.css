@@ -1,5 +1,4 @@
-.row {
-  /* display: inline; */
+/* .row {
   max-width: 114rem;
   margin: 0 auto;
   margin-top: 2%;
@@ -17,14 +16,25 @@
 
 .row .col-1-of-3 {
   width: calc((100% - 2 * 6rem) / 4);
+} */
+
+#card-container {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 40px 0px 20px 180px;
+
+
 }
 
-
 .card {
+  width: 500px;
   perspective: 75rem;
   -moz-perspective: 75rem;
   position: relative;
   height: 25rem;
+  margin: 5px;
 }
 
 .card__side {

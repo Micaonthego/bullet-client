@@ -83,6 +83,7 @@ class Signin extends Component {
         return (
             <IconContext.Provider value={{ color: "white", className: "global-class-name", size: "1.50em" }}>
                 <div className="Landing">
+
                     <header className="header">
                         {/* <div className="logo-box">
                         <img src="./whitebullet.png" alt="Logo" className="logo-1" />
@@ -92,19 +93,19 @@ class Signin extends Component {
                                 <span className='heading-primary-main'>BULLET.</span>
                                 <span className='heading-primary-sub'>you don't have to slow down to get in touch with yourself</span>
                             </h1>
-                            {this.props.currentUser ? null : 
-                            <div>
-                                <form id="signin" onSubmit={this.handleSubmit} action="#">
-                                    <input className="signin" onChange={this.onChange} type="text" placeholder="Username" name='username' />
+                            {this.props.currentUser ? null :
+                                <div>
+                                    <form id="signin" onSubmit={this.handleSubmit} action="#">
+                                        <input className="signin" onChange={this.onChange} type="text" placeholder="Username" name='username' />
+                                        <br />
+                                        <input className="signin" onChange={this.onChange} type="password" placeholder="Password" name="password" />
+                                        <button>
+                                            <FaArrowRight />
+                                        </button>
+                                    </form>
+                                    <Link to="/signup">Create Account</Link>
                                     <br />
-                                    <input className="signin" onChange={this.onChange} type="password" placeholder="Password" name="password" />
-                                    <button>
-                                        <FaArrowRight />
-                                    </button>
-                                </form>
-                                <Link to="/signup">Create Account</Link>
-                                <br />
-                            </div>
+                                </div>
                             }
                         </div>
                     </header>

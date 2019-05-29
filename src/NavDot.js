@@ -40,10 +40,10 @@ class NavDot extends React.Component {
                           <a href="/about">ABOUT</a>
                         </li>
                         <li>
-                          <a href="/homedeck">MY PAGE</a>
+                          <a href="/homedeck">CREATE</a>
                         </li>
                         <li>
-                          <a href="/calendar">CALENDAR</a>
+                          <a href="/calendar">BULLETS</a>
                         </li>
                         <li>
                           <a href="/timeline">TIMELINE</a>

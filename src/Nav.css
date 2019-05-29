@@ -16,7 +16,7 @@ ul {
 .bullet-logo {
   /* margin-left: auto; */
   margin-right: auto;
-  margin-top: 1.2%;
+  margin-top: .10%;
   font-size: 1.6em;
   color: black;
 }
@@ -36,7 +36,7 @@ ul {
 
 .menu-wrap {
   position: fixed;
-  top: 4%;
+  top: 3.5%;
   margin-left: 92%;
   border-left-style: 50;
   z-index: 1;
