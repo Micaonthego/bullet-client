@@ -7,7 +7,8 @@ import Footer from './Footer'
 function TimelineBullet(props) {
     // console.log(props)
     return (
-        <React.Fragment>    
+        <React.Fragment>   
+          
         <div className="timeline">
             <div className={props.index % 2 === 0 ? "container left" : "container right"}>
                 <div className="content">

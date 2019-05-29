@@ -6,6 +6,7 @@ import Signin from './Signin'
 import HomeDeck from './HomeDeck'
 import About from './About'
 import TimelineDeck from './TimelineDeck'
+import NavDot from './NavDot'
 
 
 
@@ -19,8 +20,15 @@ class App extends Component {
     bullets: []
   }
 
+  logOut = () => {
+    localStorage.removeItem('token')
+    this.props.history.push(`/`)
+    this.setState({ currentUser: null })
+
+  }
+
   setCurrentUser = (response) => {
-    console.log(response)
+    // console.log(response)
     if (localStorage.getItem('token')) {
       this.setState({
         currentUser: response,
@@ -116,6 +124,7 @@ class App extends Component {
     console.log(this.state.bullets)
     return (
       < React.Fragment >
+        <NavDot currentUser={this.state.currentUser} logOut={this.logOut} />
         <Switch>
           <Route path='/calendar' render={(props) => {
             return <Calendar updateLike={this.updateLike} deleteBullet={this.deleteBullet} bullets={this.state.bullets}  {...props} setCurrentUser={this.setCurrentUser} />
@@ -139,7 +148,11 @@ class App extends Component {
             )
           }} />
           <Route exact path='/homedeck' render={(props) => {
-            return <HomeDeck addBullet={this.addBullet} bullets={this.state.bullets} setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser}
+            return <HomeDeck
+              addBullet={this.addBullet}
+              bullets={this.state.bullets}
+              setCurrentUser={this.setCurrentUser}
+              currentUser={this.state.currentUser}
               afterUpdate={this.afterUpdate} {...props} />
           }} />
           <Route path='/signup' render={(props) => {
