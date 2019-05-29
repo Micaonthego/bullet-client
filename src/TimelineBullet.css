@@ -25,6 +25,127 @@
     height: 25rem;
 }
 
+.card-timeline__side {
+    height: 25rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card-timeline__side--front {
+    background-color: #fff;
+}
+
+.card-timeline__side--back {
+    transform: rotateY(180deg);
+}
+
+.card-timeline__side--back-1 {
+    background-image: linear-gradient(to right bottom, #000, #1e1f1e);
+}
+
+.card-timeline:hover .card-timeline__side--front {
+    transform: rotateY(-180deg);
+}
+
+.card-timeline:hover .card-timeline__side--back {
+    transform: rotateY(0);
+}
+
+.card-timeline__picture {
+    background-size: cover;
+    height: 25rem;
+    background-blend-mode: screen;
+    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+.card-timeline__heading {
+    font-size: 6.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 14rem;
+    right: 2rem;
+    width: 75%;
+}
+
+.card-timeline__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.card-timeline__heading-span--1 {
+    background-image: linear-gradient(to right bottom, rgba(8, 8, 8, 0.8), rgba(18, 19, 18, 0.8));
+}
+
+.card-timeline__details {
+    padding: 3rem;
+}
+
+.card-timeline__details ul {
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.card-timeline__details ul li {
+    text-align: center;
+    font-size: .75rem;
+    padding: .3rem;
+}
+
+
+.card-timeline__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+.card-timeline__bullet-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+
+
+.trash {
+    margin-left: 50px;
+    margin-top: 20%;
+}
+
+.heart {
+    margin-left: 50px;
+    margin-top: 20%;
+}
+
+.edit {
+    margin-left: 50px;
+    margin-top: 20%;
+}
+
+.responsive {
+    width: 100%;
+    height: 100%;
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
     content: '';
