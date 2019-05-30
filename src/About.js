@@ -37,14 +37,14 @@ export default class About extends Component {
             <React.Fragment>
                 <h1 className="about-title">ABOUT</h1>
                 <div className="css-typing">
-                    <h3>BULLET IS A JOURNALING APP DESIGNED TO HELP YOU GET IN TOUCH WITH YOURSELF IN UNDER A MINUTE EACH DAY.
-                </h3>
-                    <h3>
+                    <h2>BULLET IS A JOURNALING APP DESIGNED TO HELP YOU GET IN TOUCH WITH YOURSELF IN UNDER A MINUTE EACH DAY.
+                </h2>
+                    <h2>
                         RECORD WHAT YOU ARE GRATEFUL FOR, SET PRIORITIES, RECOGNIZE YOUR ACHIEVEMENTS, REFLECT ON YOUR FEELINGS AND ADD IMAGES TO CAPTURE MEMORIES.
-            </h3>
-                    <h3>VIEW ALL OF YOUR BULLETS OR SWITCH TO THE TIMELINE VIEW TO LOOK BACK AT FAVORITED DAYS.</h3>
-                    <h3>DON'T GET LOST IN EVERYDAY LIFE.</h3>
-                    <h3> JUST BULLET.  </h3>
+            </h2>
+                    <h2>VIEW ALL OF YOUR BULLETS OR SWITCH TO THE TIMELINE VIEW TO LOOK BACK AT FAVORITED DAYS.</h2>
+                    <h2>DON'T GET LOST IN EVERYDAY LIFE.</h2>
+                    <h2> JUST BULLET.  </h2>
                 </div>
                 <Footer />
             </React.Fragment> 

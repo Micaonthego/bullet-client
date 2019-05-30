@@ -3,18 +3,18 @@
     color: black;
     text-align: center;
 }
-.css-typing h3 {
+.css-typing h2 {
     margin: 50px auto;
     text-align: center;
     border-right: transparent;
     color: black;
-    font-size: 15px;
+    font-size: 20px;
     /* font-weight: 900px; */
     white-space: nowrap;
     overflow: hidden;
 }
 
-.css-typing h3:nth-child(1) {
+.css-typing h2:nth-child(1) {
     width: 100%;
     -webkit-animation: type 8s steps(40, end);
     animation: type 8s steps(40, end);
@@ -22,7 +22,7 @@
     animation-fill-mode: forwards;
 }
 
-.css-typing h3:nth-child(2) {
+.css-typing h2:nth-child(2) {
     width: 100%;
     opacity: 0;
     -webkit-animation: type2 8s steps(40, end);
@@ -33,7 +33,7 @@
     animation-fill-mode: forwards;
 }
 
-.css-typing h3:nth-child(3) {
+.css-typing h2:nth-child(3) {
     width: 100%;
     opacity: 0;
     -webkit-animation: type3 8s steps(50, end), blink .5s step-end infinite alternate;
@@ -44,7 +44,7 @@
     animation-fill-mode: forwards;
 }
 
-.css-typing h3:nth-child(4) {
+.css-typing h2:nth-child(4) {
     width: 100%;
     opacity: 0;
     -webkit-animation: type3 8s steps(50, end), blink .5s step-end infinite alternate;
@@ -55,7 +55,7 @@
     animation-fill-mode: forwards;
 }
 
-.css-typing h3:nth-child(5) {
+.css-typing h2:nth-child(5) {
     width: 100%;
     opacity: 0;
     -webkit-animation: type3 8s steps(50, end), blink .5s step-end infinite alternate;
