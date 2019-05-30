@@ -158,7 +158,10 @@ class App extends Component {
           <Route path='/signup' render={(props) => {
             return <Signup setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
           }} />
-          <Route path='/about' component={About} />
+          <Route path='/about' render={(props) => {
+            return <About setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
+          }} />
+          {/* <Route path='/about' component={About} /> */}
           <Route path='/' render={(props) => {
             return <Signin setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
           }} />
@@ -168,5 +171,4 @@ class App extends Component {
     )
   }
 }
-
 export default withRouter(App);

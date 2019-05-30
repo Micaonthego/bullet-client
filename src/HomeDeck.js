@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Profile from './Profile'
 import './Homedeck.css';
-import NavDot from './NavDot'
 import NewBullet from './NewBullet'
 import Footer from './Footer'
 

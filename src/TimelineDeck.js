@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import TimelineBullet from './TimelineBullet'
-import NavDot from './NavDot'
 class TimelineDeck extends Component {
 
     componentDidMount() {
@@ -44,7 +43,6 @@ class TimelineDeck extends Component {
         return (
             <div>
                 <h1 style={{ color: "black" }}>TIMELINE</h1>
-                {/* <NavDot /> */}
                 {this.renderFavoriteBullets()}
             </div>
         )
