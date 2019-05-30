@@ -37,7 +37,7 @@ ul {
 .menu-wrap {
   position: fixed;
   top: 3.5%;
-  margin-left: 92%;
+  margin-left: 89%;
   border-left-style: 50;
   z-index: 1;
 }
@@ -165,7 +165,7 @@ ul {
 .menu-wrap .menu>div>div>ul>li {
   list-style: none;
   color: #fff;
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .menu-wrap .menu>div>div>ul>li>a {

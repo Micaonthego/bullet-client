@@ -1,8 +1,5 @@
 
 import React from 'react'
-// import { Link } from 'react-router-dom'
-// import { FaBars } from 'react-icons/fa';
-// import { IconContext } from "react-icons";
 import './Nav.css';
 
 
@@ -21,7 +18,6 @@ class NavDot extends React.Component {
                 <img src="./blackbullet.png" className="logo" alt="logo" />
               </a>
             </li>
-            <li className="bullet-logo"></li>
             <li className="menu-wrap">
               <input type="checkbox" className="toggler" />
               <div className="cool">

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import NavDot from './NavDot'
 import './signup.css';
 
 

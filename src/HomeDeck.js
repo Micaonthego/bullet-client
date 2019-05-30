@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Profile from './Profile'
 import './Homedeck.css';
-import NavDot from './NavDot'
 import NewBullet from './NewBullet'
 import Footer from './Footer'
 
@@ -44,7 +43,6 @@ class HomeDeck extends Component {
 
         return (
             <React.Fragment>
-                {/* <NavDot /> */}
                 <div className="main-page">
                     <Profile currentUser={this.props.currentUser} bullets={this.props.bullets} />
                     <NewBullet addBullet={this.props.addBullet}
