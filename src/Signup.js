@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './signup.css';
+import { FaCameraRetro } from 'react-icons/fa';
+import Footer from './Footer'
 
 
 
@@ -66,6 +68,7 @@ class Signup extends Component {
     render() {
         console.log(this.props.currentUser)
         return (
+            <React.Fragment>
             <div className="signup" id="container">
                 <form className="signup" onSubmit={this.createUser} action="#">
                     <h1 className="black-text">Create Account</h1>
@@ -73,11 +76,13 @@ class Signup extends Component {
                     <input className="signup" onChange={this.onChange} type="text" placeholder="Aspiration" name="aspiration" />
                     <input className="signup" onChange={this.onChange} type="password" placeholder="Password" name="password" />
                     <br />
-                    <button className="black" onClick={this.openWidget}>+ Photo</button>
+                    <button className="black" onClick={this.openWidget}><FaCameraRetro/></button>
                     <br />
                     <button className="black">Sign Up</button>
                 </form>
             </div>
+            <Footer/>
+            </React.Fragment>
         )
     }
 }

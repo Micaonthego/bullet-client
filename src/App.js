@@ -161,7 +161,6 @@ class App extends Component {
           <Route path='/about' render={(props) => {
             return <About setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
           }} />
-          {/* <Route path='/about' component={About} /> */}
           <Route path='/' render={(props) => {
             return <Signin setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser} {...props} />
           }} />

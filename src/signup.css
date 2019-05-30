@@ -3,18 +3,19 @@ form.signup {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* padding: 0 50px; */
+    padding: 0 50px;
     height: 100%;
     text-align: center;
     margin: auto;
 }
 
 div.signup {
+    margin: 60px auto;
     opacity: .88;
     flex: none;
     align-items: center;
     border-radius: 5px;
-    width: 30%;
+    width: 50%;
     border: 2px solid rgba(238, 238, 238, 1);
     box-shadow: 10px 15px 25px -5px #000000;
 }
@@ -49,4 +50,8 @@ button.black {
     background-color: black;
     padding: 10px 20px;
 
+}
+
+.black-text {
+    color: black;
 }

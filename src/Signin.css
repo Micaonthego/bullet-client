@@ -96,27 +96,7 @@ input.signin {
 
 
 
-/* .container {
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  position: absolute;
-  overflow: hidden;
-  width: 768px;
-  max-width: 100%;
-  min-height: 480px;
-  top: 50%;
-  bottom: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-} */
 
-/* .form-container {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.6s ease-in-out;
-} */
 
 /* sets width of form inputs */
 .sign-in-container {
@@ -126,29 +106,4 @@ input.signin {
 }
 
 
-/* .sign-up-container {
-  left: 0;
-  width: 50%;
-  opacity: 0;
-  z-index: 1;
-}
- */
 
-
-
-
-
-/* .overlay-panel {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
-} */

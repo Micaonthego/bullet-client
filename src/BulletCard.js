@@ -10,7 +10,6 @@ function BulletCard(props) {
     // console.log(props)
     return (
         <IconContext.Provider value={{ color: "white", className: "global-class-name", size: "1.25em" }}>
-            {/* <div id="card-container"> */}
             <div className="card">
                 <div className="card__side card__side--front">
                     <div className="card__picture card__picture--1">
@@ -45,9 +44,7 @@ function BulletCard(props) {
                     </div>
                 </div>
             </div>
-            {/* </div> */}
             <br />
-            {/* </div> */}
         </IconContext.Provider>
 
     )

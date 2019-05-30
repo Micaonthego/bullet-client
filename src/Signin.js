@@ -85,9 +85,6 @@ class Signin extends Component {
                 <div className="Landing">
 
                     <header className="header">
-                        {/* <div className="logo-box">
-                        <img src="./whitebullet.png" alt="Logo" className="logo-1" />
-                    </div> */}
                         <div className='text-box'>
                             <h1 className='heading-primary'>
                                 <span className='heading-primary-main'>BULLET.</span>

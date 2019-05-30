@@ -41,7 +41,7 @@ class Calendar extends Component {
     render() {
         // console.log(this.state.bullets)
         return (
-            <div>
+            <div className='cal-h1'>
                 <h1 style={{ color: "black" }}>MY BULLETS</h1>
                 <div id='card-container'>
                     {this.renderBullets()}

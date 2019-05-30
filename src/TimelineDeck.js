@@ -41,7 +41,7 @@ class TimelineDeck extends Component {
     render() {
         console.log(this.props.bullets)
         return (
-            <div>
+            <div className="time-h1">
                 <h1 style={{ color: "black" }}>TIMELINE</h1>
                 {this.renderFavoriteBullets()}
             </div>
