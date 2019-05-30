@@ -22,7 +22,7 @@ body {
   background-position: top;
   /* parent to logo-box, so set position of it to relative here */
   position: relative;
-
+z-index: -1;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
     /* set coordinates of corners of shape you want to be visible, this is wedge at bottom of header */
 }

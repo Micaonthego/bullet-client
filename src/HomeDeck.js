@@ -44,7 +44,6 @@ class HomeDeck extends Component {
 
         return (
             <React.Fragment>
-                {/* <NavDot /> */}
                 <div className="main-page">
                     <Profile currentUser={this.props.currentUser} bullets={this.props.bullets} />
                     <NewBullet addBullet={this.props.addBullet}
