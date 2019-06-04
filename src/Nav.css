@@ -8,9 +8,6 @@ ul {
   height: 8vh;
   align-items: center;
   padding: 0 15px;
-  /* border: 1px solid rgba(238, 238, 238, 1); */
-  /* border-radius: 5px; */
-  /* box-shadow: 10px 15px 25px -20px rgb(0, 0, 0, 0.8);  */
 }
 
 .bullet-logo {
@@ -106,12 +103,12 @@ ul {
   transform: rotate(90deg);
 }
 
-/* rotate on hover when checked */
+/* rotate on hover */
 .menu-wrap .toggler:checked:hover+.cool>div {
   transform: rotate(225deg);
 }
 
-/* show the list  */
+/* list  */
 .menu-wrap .toggler:checked~.menu {
   visibility: visible;
 }
@@ -165,7 +162,7 @@ ul {
 .menu-wrap .menu>div>div>ul>li {
   list-style: none;
   color: #fff;
-  font-size: 45px;
+  font-size: 55px;
 }
 
 .menu-wrap .menu>div>div>ul>li>a {
